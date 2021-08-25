@@ -25,7 +25,7 @@ public class EmpController {
 
 	@GetMapping("sayHello")
 	@ResponseBody
-	public Object sayHello(@Validated Emp emp, BindingResult result) {
+	public Object sayHello(Emp emp, BindingResult result) {
 		if (result.hasErrors()) {
 			return result.getAllErrors();
 		}
